@@ -4,6 +4,7 @@ import '../../shared/themes/app_colors.dart';
 import '../../shared/themes/app_images.dart';
 import '../../shared/themes/app_text_styles.dart';
 import '../../shared/widgets/social_login/social_login_button.dart';
+import '../home/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -57,9 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding:
                         const EdgeInsets.only(top: 40, right: 40, left: 40),
-                    child: SocialLoginButton(onTap: () {
-                      print('clicou');
-                    }),
+                    child: SocialLoginButton(onTap: () {}),
                   )
                 ],
               ),
