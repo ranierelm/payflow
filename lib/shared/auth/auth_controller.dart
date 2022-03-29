@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../modules/home/home_page.dart';
-import '../../modules/login/login_page.dart';
-
 class AuthController {
   var _isAuthenticated = false;
   var _user;
@@ -14,12 +11,10 @@ class AuthController {
       _user = user;
       _isAuthenticated = true;
 
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const HomePage()));
+      Navigator.pushReplacementNamed(context, "/home");
     } else {
       _isAuthenticated = false;
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const LoginPage()));
+      Navigator.pushReplacementNamed(context, "/login");
     }
   }
 }
