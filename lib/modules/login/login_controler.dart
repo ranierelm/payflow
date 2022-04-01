@@ -5,7 +5,7 @@ import '../../shared/auth/auth_controller.dart';
 import '../../shared/models/user_model.dart';
 
 class LoginController {
-  final authControler = AuthController();
+  final authController = AuthController();
 
   Future<void> googleSignIn(BuildContext context) async {
     GoogleSignIn _googleSignIn = GoogleSignIn(
@@ -21,11 +21,11 @@ class LoginController {
         photoURL: response.photoUrl,
       );
 
-      authControler.setUser(context, user);
+      authController.setUser(context, user);
 
       print(response);
     } catch (error) {
-      authControler.setUser(context, null);
+      authController.setUser(context, null);
       print(error);
     }
   }
