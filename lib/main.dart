@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'app_widget.dart';
 
 void main() {
-  runApp(AppFirebase());
+  runApp(const AppFirebase());
 }
 
 class AppFirebase extends StatefulWidget {
+  const AppFirebase({Key? key}) : super(key: key);
+
   @override
   State<AppFirebase> createState() => _AppFirebaseState();
 }

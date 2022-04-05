@@ -62,7 +62,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                   style: TextStyles.buttonBackground,
                 ),
                 centerTitle: true,
-                leading: BackButton(color: AppColors.background),
+                leading: const BackButton(color: AppColors.background),
               ),
               body: Column(
                 children: [

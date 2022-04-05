@@ -53,7 +53,7 @@ class BarcodeScannerController {
           status.cameraController!.stopImageStream();
         }
         final barcodes = await barcodeScanner.processImage(inputImage);
-        var barcode;
+        dynamic barcode;
         for (Barcode item in barcodes) {
           barcode = item.value.displayValue;
         }
@@ -114,7 +114,7 @@ class BarcodeScannerController {
             );
             final inputImageCamera = InputImage.fromBytes(
                 bytes: bytes, inputImageData: inputImageData);
-            await Future.delayed(Duration(seconds: 3));
+            await Future.delayed(const Duration(seconds: 3));
             await scannerBarCode(inputImageCamera);
           } catch (e) {
             print(e);

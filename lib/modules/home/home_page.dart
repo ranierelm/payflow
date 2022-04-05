@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: pages[homeController.currentPage],
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
           height: 90,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                     homeController.setPage(0);
                     setState(() {});
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.home,
                     color: AppColors.primary,
                   )),
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.pushReplacementNamed(
                             context, "/barcode_scanner");
                       },
-                      icon: Icon(Icons.add_box_outlined,
+                      icon: const Icon(Icons.add_box_outlined,
                           color: AppColors.background)),
                 ),
               ),
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                     homeController.setPage(1);
                     setState(() {});
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.description_outlined,
                     color: AppColors.body,
                   )),

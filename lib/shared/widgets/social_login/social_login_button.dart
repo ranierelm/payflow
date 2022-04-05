@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 import '../../themes/app_colors.dart';
@@ -20,7 +18,8 @@ class SocialLoginButton extends StatelessWidget {
         decoration: BoxDecoration(
             color: AppColors.shape,
             borderRadius: BorderRadius.circular(5),
-            border: Border.fromBorderSide(BorderSide(color: AppColors.stroke))),
+            border: const Border.fromBorderSide(
+                BorderSide(color: AppColors.stroke))),
         child: Row(
           children: [
             Expanded(flex: 1, child: Image.asset(AppImages.google)),

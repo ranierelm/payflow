@@ -50,7 +50,7 @@ class BottomSheetWidget extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(0, 5, 0, 40),
                       child: Text(subtitle, style: TextStyles.buttonHeading),
                     ),
-                    Divider(
+                    const Divider(
                       height: 1,
                       color: AppColors.stroke,
                     ),
