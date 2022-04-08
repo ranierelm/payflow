@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../shared/themes/app_colors.dart';
 import '../../shared/themes/app_text_styles.dart';
+import '../extract/extract_page.dart';
 import '../meus_boletos/meus_boletos_page.dart';
 import 'home_controller.dart';
 
@@ -15,13 +16,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
   final pages = [
-    Container(
-      color: AppColors.background,
-      child: MeusBoletosPage(),
-    ),
-    Container(
-      color: Colors.blue,
-    ),
+    const MeusBoletosPage(),
+    const ExtractPage(),
   ];
 
   @override
@@ -64,9 +60,11 @@ class _HomePageState extends State<HomePage> {
                     homeController.setPage(0);
                     setState(() {});
                   },
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.home,
-                    color: AppColors.primary,
+                    color: homeController.currentPage == 0
+                        ? AppColors.primary
+                        : AppColors.body,
                   )),
               GestureDetector(
                 child: Container(
@@ -89,9 +87,11 @@ class _HomePageState extends State<HomePage> {
                     homeController.setPage(1);
                     setState(() {});
                   },
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.description_outlined,
-                    color: AppColors.body,
+                    color: homeController.currentPage == 1
+                        ? AppColors.primary
+                        : AppColors.body,
                   )),
             ],
           )),
